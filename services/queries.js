@@ -49,12 +49,12 @@ function members() {
     });
 }
 
-function first() {
+function first(limit) {
   return connect()
     .then(function (conn) {
       return r.table('members')
         .orderBy({index: 'joined'})
-        .limit(50)
+        .limit(limit)
         .run(conn);
     })
     .then(function (cursor) {

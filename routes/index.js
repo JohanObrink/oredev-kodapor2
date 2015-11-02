@@ -6,6 +6,7 @@ var express = require('express'),
 var pages = [
   {name: 'Members', href: '/members'},
   {name: 'First members', href: '/first'},
+  {name: 'Collage', href: '/collage'},
   {name: 'Most active members', href: '/active'},
   {name: 'Most liked members', href: '/liked'},
   {name: 'Companies', href: '/companies'},
@@ -31,10 +32,22 @@ router.get('/members', function(req, res, next) {
 });
 
 router.get('/first', function(req, res, next) {
-  queries.first()
+  queries.first(50)
     .then(function (members) {
       res.render('first', {
         title: 'First members',
+        members: members,
+        pages: pages
+      });
+    })
+    .catch(next);  
+});
+
+router.get('/collage', function(req, res, next) {
+  queries.first(1000)
+    .then(function (members) {
+      res.render('collage', {
+        title: 'Collage',
         members: members,
         pages: pages
       });

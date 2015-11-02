@@ -12,64 +12,165 @@
         <%})%>
       </ul>
     </nav>
-    <h1><%= title %></h1>
-
-    <div class="bracket">
-      <h2>Posts by comments</h2>
-      <ol>
-      <%postsByComments.forEach(function (post) {%>
-        <li>
-          <%=post.from.name%>
-          <p><%=post.message%></p>
-          <div><span class="value"><%=post.comment_count%></span> comments</div>
-          <div><span class="value"><%=post.like_count%></span> likes</div>
-          <div><span class="value"><%=post.comment_like_count%></span> likes on comments</div> 
-        </li>
-      <%})%>
-      </ol>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <section>
+            <h1>Top 20 Posts</h1>
+            <h3>Ordered by number of comments</h3>
+          </section>
+          <%postsByComments.forEach(function (post) {%>
+            <section>
+              <h2><%=post.from.name%></h2>
+              <p><%=post.message%></p>
+              <p class="stats">
+                <div><span class="value"><%=post.comment_count%></span> comments</div>
+                <div><span class="value"><%=post.like_count%></span> likes</div>
+                <div><span class="value"><%=post.comment_like_count%></span> likes on comments</div>
+              </p>
+            </section>
+          <%})%>
+        </section>
+        <section>
+          <section>
+            <h1>Top 20 Posts</h1>
+            <h3>Ordered by number of likes</h3>
+          </section>
+          <%postsByLikes.forEach(function (post) {%>
+            <section>
+              <h2><%=post.from.name%></h2>
+              <p><%=post.message%></p>
+              <p class="stats">
+                <div><span class="value"><%=post.comment_count%></span> comments</div>
+                <div><span class="value"><%=post.like_count%></span> likes</div>
+                <div><span class="value"><%=post.comment_like_count%></span> likes on comments</div> 
+              </p>
+            </section>
+          <%})%>
+        </section>
+        <section>
+          <section>
+            <h1>Top 20 Posts</h1>
+            <h3>Ordered by number of likes including likes on comments</h3>
+          </section>
+          <%postsByTotalLikes.forEach(function (post) {%>
+            <section>
+              <h2><%=post.from.name%></h2>
+              <p><%=post.message%></p>
+              <p class="stats">
+                <div><span class="value"><%=post.comment_count%></span> comments</div>
+                <div><span class="value"><%=post.like_count%></span> likes</div>
+                <div><span class="value"><%=post.comment_like_count%></span> likes on comments</div> 
+              </p>
+            </section>
+          <%})%>
+        </section>
+        <section>
+          <section>
+            <h1>Top 20 comments</h1>
+            <h3>Ordered by number of likes</h3>
+          </section>
+          <%commentsByLikes.forEach(function (comment) {%>
+            <section>
+              <h2><%=comment.from.name%></h2>
+              <p><%=comment.message%></p>
+              <p class="stats">
+                <div><span class="value"><%=comment.like_count%></span> likes</div>
+              </p>
+            </section>
+          <%})%>
+        </section>
+      </div>
     </div>
+    <script src="oredev-kodapor.js"></script>
+    <script>
+      Reveal.initialize({
 
-    <div class="bracket">
-      <h2>Posts by likes</h2>
-      <ol>
-      <%postsByLikes.forEach(function (post) {%>
-        <li>
-          <%=post.from.name%>
-          <p><%=post.message%></p>
-          <div><span class="value"><%=post.comment_count%></span> comments</div>
-          <div><span class="value"><%=post.like_count%></span> likes</div>
-          <div><span class="value"><%=post.comment_like_count%></span> likes on comments</div>
-        </li>
-      <%})%>
-      </ol>
-    </div>
+        // Display controls in the bottom right corner
+        controls: true,
 
-    <div class="bracket">
-      <h2>Posts by likes (including comment likes)</h2>
-      <ol>
-      <%postsByTotalLikes.forEach(function (post) {%>
-        <li>
-          <%=post.from.name%>
-          <p><%=post.message%></p>
-          <div><span class="value"><%=post.comment_count%></span> comments</div>
-          <div><span class="value"><%=post.like_count%></span> likes</div>
-          <div><span class="value"><%=post.comment_like_count%></span> likes on comments</div>
-        </li>
-      <%})%>
-      </ol>
-    </div>
+        // Display a presentation progress bar
+        progress: true,
 
-    <div class="bracket">
-      <h2>Comments by likes</h2>
-      <ol>
-      <%commentsByLikes.forEach(function (comment) {%>
-        <li>
-          <%=comment.from.name%>
-          <p><%=comment.message%></p>
-          <div><span class="value"><%=comment.like_count%></span> likes</div>
-        </li>
-      <%})%>
-      </ol>
-    </div>
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // Hides the address bar on mobile devices
+        hideAddressBar: true,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+
+        // Transition speed
+        transitionSpeed: 'default', // default/fast/slow
+
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Parallax background image
+        parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+        // Parallax background size
+        parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
+
+        // Amount to move parallax background (horizontal and vertical) on slide change
+        // Number, e.g. 100
+        parallaxBackgroundHorizontal: '',
+        parallaxBackgroundVertical: ''
+
+    });
+    </script>
   </body>
 </html>
