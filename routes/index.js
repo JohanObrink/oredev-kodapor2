@@ -158,4 +158,8 @@ router.get('/posts', function(req, res, next) {
     .catch(next);  
 });
 
+router.get('/heatmap', function(req, res, next) {
+  res.render('heatmap');
+});
+
 module.exports = router;
