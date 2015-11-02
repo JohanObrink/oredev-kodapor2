@@ -1,0 +1,46 @@
+Update posts, comments, likes
+
+r.db('kodapor')
+  .table('members')
+  .forEach(function (m) {
+    return r.db('kodapor').table('members')
+      .get(m('id'))
+      .update({
+        posts: r.db('kodapor').table('posts').getAll(m('appId'), {index: 'fromId'}).count(),
+        comments: r.db('kodapor').table('comments').getAll(m('appId'), {index: 'fromId'}).count(),
+        likes: r.db('kodapor').table('likes').getAll(m('appId'), {index: 'user_id'}).count()
+      }, {nonAtomic: true});
+  })
+
+
+Set like_count and comment_count on posts
+
+r.db('kodapor')
+  .table('posts')
+  .forEach(function (p) {
+    return r.db('kodapor').table('posts').get(p('id')).update({
+      comment_count: r.db('kodapor').table('comments')
+        .getAll(p('id'), {index: 'post_id'})
+        .count(),
+      like_count: r.db('kodapor').table('likes')
+        .getAll(p('id'), {index: 'post_id'})
+        .filter(function (l) { return l('comment_id').eq(null); })
+        .count(),
+      comment_like_count: r.db('kodapor').table('likes')
+        .getAll(p('id'), {index: 'post_id'})
+        .filter(function (l) { return l('comment_id').eq(null).not(); })
+        .count()
+    }, {nonAtomic: true});
+  });
+
+Total like count
+
+r.db('kodapor')
+  .table("posts")
+  .indexCreate('totalLikes', function (p) {
+    return r.expr([p('like_count'), p('comment_like_count')]).sum();
+  })
+
+Backup
+
+rethinkdb dump -e kodapor

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/oredev-kodapor.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+
+    <div class="bracket">
+      <h2>Links</h2>
+      <ol>
+      <%links.forEach(function (link) {%>
+        <li>
+          <%=link.link%>: <%=link.count%>
+        </li>
+      <%})%>
+      </ol>
+    </div>
+
+    <div class="bracket">
+      <h2>Linked domains</h2>
+      <ol>
+      <%domains.forEach(function (link) {%>
+        <li>
+          <%=link.link%>: <%=link.count%>
+        </li>
+      <%})%>
+      </ol>
+    </div>
+
+    <div class="bracket">
+      <h2>Liked links</h2>
+      <ol>
+      <%likedLinks.forEach(function (link) {%>
+        <li>
+          <%=link.link%>: <%=link.count%>
+        </li>
+      <%})%>
+      </ol>
+    </div>
+
+    <div class="bracket">
+      <h2>Liked linked domains</h2>
+      <ol>
+      <%likedDomains.forEach(function (link) {%>
+        <li>
+          <%=link.link%>: <%=link.count%>
+        </li>
+      <%})%>
+      </ol>
+    </div>
+  </body>
+</html>

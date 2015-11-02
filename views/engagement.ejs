@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/oredev-kodapor.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+
+    <div class="bracket">
+      <h2>Posts by comments</h2>
+      <ol>
+      <%postsByComments.forEach(function (post) {%>
+        <li>
+          <%=post.from.name%>
+          <p><%=post.message%></p>
+          Comments: <%=post.comment_count%><br />
+          Likes: <%=post.like_count%><br />
+          Likes on comments: <%=post.comment_like_count%>
+        </li>
+      <%})%>
+      </ol>
+    </div>
+
+    <div class="bracket">
+      <h2>Posts by likes</h2>
+      <ol>
+      <%postsByLikes.forEach(function (post) {%>
+        <li>
+          <%=post.from.name%>
+          <p><%=post.message%></p>
+          Comments: <%=post.comment_count%><br />
+          Likes: <%=post.like_count%><br />
+          Likes on comments: <%=post.comment_like_count%>
+        </li>
+      <%})%>
+      </ol>
+    </div>
+
+    <div class="bracket">
+      <h2>Posts by likes (including comment likes)</h2>
+      <ol>
+      <%postsByTotalLikes.forEach(function (post) {%>
+        <li>
+          <%=post.from.name%>
+          <p><%=post.message%></p>
+          Comments: <%=post.comment_count%><br />
+          Likes: <%=post.like_count%><br />
+          Likes on comments: <%=post.comment_like_count%>
+        </li>
+      <%})%>
+      </ol>
+    </div>
+
+    <div class="bracket">
+      <h2>Comments by likes</h2>
+      <ol>
+      <%commentsByLikes.forEach(function (comment) {%>
+        <li>
+          <%=comment.from.name%>
+          <p><%=comment.message%></p>
+          Likes: <%=comment.like_count%><br />
+        </li>
+      <%})%>
+      </ol>
+    </div>
+  </body>
+</html>

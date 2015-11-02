@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/oredev-kodapor.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+
+    <ol>
+    <%members.forEach(function (member) {%>
+      <li><%=member.name%>: <%=member.joined.toJSON()%></li>
+    <%})%>
+    </ol>
+  </body>
+</html>

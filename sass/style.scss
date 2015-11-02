@@ -1,0 +1,57 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+  color: #00B7FF;
+}
+
+#chart {
+  svg { height: 800px; }
+}
+
+.barchart {
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 4000px;
+
+  .barchart__chart {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 300px;
+    .bar {
+      display: flex;
+      width: 20px;
+      &.increase { background-color: green; }
+      &.total { background-color: red; }
+      span {
+        color: white;
+        position: absolute;
+      }
+    }
+  }
+
+  .barchart__x {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 60px;
+    .caption {
+      display: flex;
+      height: 40px;
+      transform: rotateZ(-90deg);
+    }
+  }
+}
+
+.bracket {
+  float: left;
+  img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}

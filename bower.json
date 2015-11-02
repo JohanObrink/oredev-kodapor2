@@ -1,0 +1,19 @@
+{
+  "name": "oredev-kodapor",
+  "version": "1.0.0",
+  "homepage": "https://github.com/JohanObrink/oredev-kodapor",
+  "authors": [
+    "Johan Öbrink <johan.obrink@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "nvd3": "~1.8.1"
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/oredev-kodapor.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+
+    <div class="bracket">
+      <h2>Score</h2>
+      <ol>
+      <%score.forEach(function (member) {%>
+        <li><%=member.name%>: <%=member.score%></li>
+      <%})%>
+      </ol>
+    </div>
+
+    <div class="bracket">
+      <h2>Posts</h2>
+      <ol>
+      <%posts.forEach(function (member) {%>
+        <li><%=member.name%>: <%=member.posts%></li>
+      <%})%>
+      </ol>
+    </div>
+
+    <div class="bracket">
+      <h2>Comments</h2>
+      <ol>
+      <%comments.forEach(function (member) {%>
+        <li><%=member.name%>: <%=member.comments%></li>
+      <%})%>
+      </ol>
+    </div>
+
+    <div class="bracket">
+      <h2>Likes</h2>
+      <ol>
+      <%likes.forEach(function (member) {%>
+        <li><%=member.name%>: <%=member.likes%></li>
+      <%})%>
+      </ol>
+    </div>
+    
+    <div class="bracket">
+      <h2>Inactive</h2>
+      <%=inactive%>
+    </div>
+  </body>
+</html>

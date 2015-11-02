@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/oredev-kodapor.css" />
+  </head>
+  <body>
+    <h1><%=title%></h1>
+    <div id="chart"><svg /></div>
+    <script src="oredev-kodapor.js"></script>
+    <script>
+      barAndLine([
+        {
+          key: 'Growth',
+          bar: true,
+          color: '#ccf',
+          values: [
+            <%members.forEach(function (member) {%>
+              ['<%=member.year+'-'+member.month%>', <%=member.increase%>],
+            <%})%>
+          ]
+        },
+        {
+          key: 'Members',
+          color: '#000',
+          values: [
+            <%members.forEach(function (member) {%>
+              ['<%=member.year+'-'+member.month%>', <%=member.total%>],
+            <%})%>
+          ]
+        }
+      ]);
+    </script>
+    <script 
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/oredev-kodapor.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+
+    <div class="bracket">
+      <h2>Companies</h2>
+      <ol>
+      <%companies.forEach(function (company) {%>
+        <li><%=company.name%>: <%=company.members%></li>
+      <%})%>
+      </ol>
+    </div>
+
+    <div class="bracket">
+      <h2>Companies with active members</h2>
+      <ol>
+      <%active.forEach(function (company) {%>
+        <li><%=company.name%>: <%=company.members%></li>
+      <%})%>
+      </ol>
+    </div>
+    
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/oredev-kodapor.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+
+    <div class="bracket">
+      <h2>Liked</h2>
+      <ol>
+      <%likedNominal.forEach(function (member) {%>
+        <li><%=member.name%>: <%=member.likedPosts%>, <%=member.likedComments%></li>
+      <%})%>
+      </ol>
+    </div>
+
+    <div class="bracket">
+      <h2>Relative liked (active)</h2>
+      <ol>
+      <%likedActive.forEach(function (member) {%>
+        <li><%=member.name%>: <%=member.pLikedPosts%>%, <%=member.pLikedComments%>%</li>
+      <%})%>
+      </ol>
+    </div>
+
+    <div class="bracket">
+      <h2>Relative liked (all)</h2>
+      <ol>
+      <%liked.forEach(function (member) {%>
+        <li><%=member.name%>: <%=member.pLikedPosts%>%, <%=member.pLikedComments%>%</li>
+      <%})%>
+      </ol>
+    </div>
+  </body>
+</html>
