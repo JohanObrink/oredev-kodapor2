@@ -5,13 +5,23 @@
     <link rel="stylesheet" href="/oredev-kodapor.css" />
   </head>
   <body>
+    <nav>
+      <ul>
+        <%pages.forEach(function (page) {%>
+          <li <%if(page.active) {%>class="active"<%}%>><a href="<%=page.href%>"><%=page.name%></a>
+        <%})%>
+      </ul>
+    </nav>
     <h1><%= title %></h1>
 
     <div class="bracket">
       <h2>Companies</h2>
       <ol>
       <%companies.forEach(function (company) {%>
-        <li><%=company.name%>: <%=company.members%></li>
+        <li>
+          <span class="value"><%=company.members%></span>
+          <%=company.name%>
+        </li>
       <%})%>
       </ol>
     </div>
@@ -20,7 +30,10 @@
       <h2>Companies with active members</h2>
       <ol>
       <%active.forEach(function (company) {%>
-        <li><%=company.name%>: <%=company.members%></li>
+        <li>
+          <span class="value"><%=company.members%></span>
+          <%=company.name%>
+        </li>
       <%})%>
       </ol>
     </div>

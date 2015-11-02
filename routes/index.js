@@ -3,6 +3,16 @@ var express = require('express'),
   r = require('rethinkdb'),
   queries = require('../services/queries');
 
+var pages = [
+  {name: 'Members', href: '/members'},
+  {name: 'First members', href: '/first'},
+  {name: 'Most active members', href: '/active'},
+  {name: 'Most liked members', href: '/liked'},
+  {name: 'Companies', href: '/companies'},
+  {name: 'Most posted links', href: '/links'},
+  {name: 'Most Engaging posts', href: '/engagement'}
+];
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
@@ -11,7 +21,11 @@ router.get('/', function(req, res, next) {
 router.get('/members', function(req, res, next) {
   queries.members()
     .then(function (members) {
-      res.render('members', {title: 'Members', members: members });
+      res.render('members', {
+        title: 'Members',
+        members: members,
+        pages: pages
+      });
     })
     .catch(next);  
 });
@@ -19,7 +33,11 @@ router.get('/members', function(req, res, next) {
 router.get('/first', function(req, res, next) {
   queries.first()
     .then(function (members) {
-      res.render('first', {title: 'First members', members: members });
+      res.render('first', {
+        title: 'First members',
+        members: members,
+        pages: pages
+      });
     })
     .catch(next);  
 });
@@ -39,7 +57,8 @@ router.get('/active', function(req, res, next) {
         posts: values[1],
         comments: values[2],
         likes: values[3],
-        inactive: values[4]
+        inactive: values[4],
+        pages: pages
       });
     })
     .catch(next);  
@@ -56,7 +75,8 @@ router.get('/liked', function(req, res, next) {
         title: 'Most liked members',
         likedNominal: values[0],
         likedActive: values[1],
-        liked: values[2]
+        liked: values[2],
+        pages: pages
       });
     })
     .catch(next);  
@@ -75,7 +95,8 @@ router.get('/links', function(req, res, next) {
         links: values[0],
         domains: values[1],
         likedLinks: values[2],
-        likedDomains: values[3]
+        likedDomains: values[3],
+        pages: pages
       });
     })
     .catch(next);  
@@ -90,7 +111,8 @@ router.get('/companies', function(req, res, next) {
       res.render('companies', {
         title: 'Companies',
         companies: values[0],
-        active: values[1]
+        active: values[1],
+        pages: pages
       });
     })
     .catch(next);  
@@ -105,11 +127,12 @@ router.get('/engagement', function(req, res, next) {
     ])
     .then(function (values) {
       res.render('engagement', {
-        title: 'Engagement',
+        title: 'Most Engaging posts',
         postsByComments: values[0],
         postsByLikes: values[1],
         postsByTotalLikes: values[2],
-        commentsByLikes: values[3]
+        commentsByLikes: values[3],
+        pages: pages
       });
     })
     .catch(next);  

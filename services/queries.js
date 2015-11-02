@@ -1,4 +1,5 @@
 var r = require('rethinkdb'),
+  moment = require('moment'),
   httpUtil = require('./httpUtil');
 
 function connect() {
@@ -52,9 +53,22 @@ function first() {
   return connect()
     .then(function (conn) {
       return r.table('members')
-        .orderBy('joined')
-        .limit(10)
+        .orderBy({index: 'joined'})
+        .limit(50)
         .run(conn);
+    })
+    .then(function (cursor) {
+      return cursor.toArray();
+    })
+    .then(function (members) {
+      return members.map(function (member) {
+        return {
+          name: member.name,
+          title: member.title,
+          image: member.image,
+          joined: moment(member.joined).format('YYYY-MM-DD HH:mm:ss')
+        };
+      });
     });
 }
 

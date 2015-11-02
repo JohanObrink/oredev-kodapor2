@@ -5,6 +5,13 @@
     <link rel="stylesheet" href="/oredev-kodapor.css" />
   </head>
   <body>
+    <nav>
+      <ul>
+        <%pages.forEach(function (page) {%>
+          <li <%if(page.active) {%>class="active"<%}%>><a href="<%=page.href%>"><%=page.name%></a>
+        <%})%>
+      </ul>
+    </nav>
     <h1><%= title %></h1>
 
     <div class="bracket">
@@ -12,7 +19,7 @@
       <ol>
       <%links.forEach(function (link) {%>
         <li>
-          <%=link.link%>: <%=link.count%>
+          <%=link.count%>: <a href="<%=link.link%>" target="_blank"><%=link.link%></a>
         </li>
       <%})%>
       </ol>
@@ -23,7 +30,7 @@
       <ol>
       <%domains.forEach(function (link) {%>
         <li>
-          <%=link.link%>: <%=link.count%>
+          <%=link.count%>: <a href="<%=link.link%>" target="_blank"><%=link.link%></a>
         </li>
       <%})%>
       </ol>
@@ -34,7 +41,7 @@
       <ol>
       <%likedLinks.forEach(function (link) {%>
         <li>
-          <%=link.link%>: <%=link.count%>
+          <%=link.count%>: <a href="<%=link.link%>" target="_blank"><%=link.link%></a>
         </li>
       <%})%>
       </ol>
@@ -45,7 +52,7 @@
       <ol>
       <%likedDomains.forEach(function (link) {%>
         <li>
-          <%=link.link%>: <%=link.count%>
+          <%=link.count%>: <a href="<%=link.link%>" target="_blank"><%=link.link%></a>
         </li>
       <%})%>
       </ol>

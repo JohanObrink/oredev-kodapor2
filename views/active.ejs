@@ -5,13 +5,20 @@
     <link rel="stylesheet" href="/oredev-kodapor.css" />
   </head>
   <body>
+    <nav>
+      <ul>
+        <%pages.forEach(function (page) {%>
+          <li <%if(page.active) {%>class="active"<%}%>><a href="<%=page.href%>"><%=page.name%></a>
+        <%})%>
+      </ul>
+    </nav>
     <h1><%= title %></h1>
 
     <div class="bracket">
       <h2>Score</h2>
       <ol>
       <%score.forEach(function (member) {%>
-        <li><%=member.name%>: <%=member.score%></li>
+        <li><span class="value"><%=member.score%></span> <%=member.name%></li>
       <%})%>
       </ol>
     </div>
@@ -20,7 +27,7 @@
       <h2>Posts</h2>
       <ol>
       <%posts.forEach(function (member) {%>
-        <li><%=member.name%>: <%=member.posts%></li>
+        <li><span class="value"><%=member.posts%></span> <%=member.name%></li>
       <%})%>
       </ol>
     </div>
@@ -29,7 +36,7 @@
       <h2>Comments</h2>
       <ol>
       <%comments.forEach(function (member) {%>
-        <li><%=member.name%>: <%=member.comments%></li>
+        <li><span class="value"><%=member.comments%></span> <%=member.name%></li>
       <%})%>
       </ol>
     </div>
@@ -38,7 +45,7 @@
       <h2>Likes</h2>
       <ol>
       <%likes.forEach(function (member) {%>
-        <li><%=member.name%>: <%=member.likes%></li>
+        <li><span class="value"><%=member.likes%></span> <%=member.name%></li>
       <%})%>
       </ol>
     </div>

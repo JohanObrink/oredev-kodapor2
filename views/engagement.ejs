@@ -5,6 +5,13 @@
     <link rel="stylesheet" href="/oredev-kodapor.css" />
   </head>
   <body>
+    <nav>
+      <ul>
+        <%pages.forEach(function (page) {%>
+          <li <%if(page.active) {%>class="active"<%}%>><a href="<%=page.href%>"><%=page.name%></a>
+        <%})%>
+      </ul>
+    </nav>
     <h1><%= title %></h1>
 
     <div class="bracket">
@@ -14,9 +21,9 @@
         <li>
           <%=post.from.name%>
           <p><%=post.message%></p>
-          Comments: <%=post.comment_count%><br />
-          Likes: <%=post.like_count%><br />
-          Likes on comments: <%=post.comment_like_count%>
+          <div><span class="value"><%=post.comment_count%></span> comments</div>
+          <div><span class="value"><%=post.like_count%></span> likes</div>
+          <div><span class="value"><%=post.comment_like_count%></span> likes on comments</div> 
         </li>
       <%})%>
       </ol>
@@ -29,9 +36,9 @@
         <li>
           <%=post.from.name%>
           <p><%=post.message%></p>
-          Comments: <%=post.comment_count%><br />
-          Likes: <%=post.like_count%><br />
-          Likes on comments: <%=post.comment_like_count%>
+          <div><span class="value"><%=post.comment_count%></span> comments</div>
+          <div><span class="value"><%=post.like_count%></span> likes</div>
+          <div><span class="value"><%=post.comment_like_count%></span> likes on comments</div>
         </li>
       <%})%>
       </ol>
@@ -44,9 +51,9 @@
         <li>
           <%=post.from.name%>
           <p><%=post.message%></p>
-          Comments: <%=post.comment_count%><br />
-          Likes: <%=post.like_count%><br />
-          Likes on comments: <%=post.comment_like_count%>
+          <div><span class="value"><%=post.comment_count%></span> comments</div>
+          <div><span class="value"><%=post.like_count%></span> likes</div>
+          <div><span class="value"><%=post.comment_like_count%></span> likes on comments</div>
         </li>
       <%})%>
       </ol>
@@ -59,7 +66,7 @@
         <li>
           <%=comment.from.name%>
           <p><%=comment.message%></p>
-          Likes: <%=comment.like_count%><br />
+          <div><span class="value"><%=comment.like_count%></span> likes</div>
         </li>
       <%})%>
       </ol>
