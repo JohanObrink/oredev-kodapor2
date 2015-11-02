@@ -79,58 +79,12 @@ router.get('/', function(req, res, next) {
   .catch(next);
 });
 
-router.get('/members', function(req, res, next) {
+router.get('/memberchart', function(req, res, next) {
   queries.members()
     .then(function (members) {
-      res.render('members', {
+      res.render('memberchart', {
         title: 'Members',
         members: members,
-        pages: pages
-      });
-    })
-    .catch(next);  
-});
-
-router.get('/first', function(req, res, next) {
-  queries.first(50)
-    .then(function (members) {
-      res.render('first', {
-        title: 'First members',
-        members: members,
-        pages: pages
-      });
-    })
-    .catch(next);  
-});
-
-router.get('/collage', function(req, res, next) {
-  queries.first(1000)
-    .then(function (members) {
-      res.render('collage', {
-        title: 'Collage',
-        members: members,
-        pages: pages
-      });
-    })
-    .catch(next);  
-});
-
-router.get('/active', function(req, res, next) {
-  Promise.all([
-      queries.topActive(),
-      queries.topActive('posts'),
-      queries.topActive('comments'),
-      queries.topActive('likes'),
-      queries.inactive()
-    ])
-    .then(function (values) {
-      res.render('active', {
-        title: 'Most active members',
-        score: values[0],
-        posts: values[1],
-        comments: values[2],
-        likes: values[3],
-        inactive: values[4],
         pages: pages
       });
     })
