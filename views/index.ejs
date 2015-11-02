@@ -27,7 +27,7 @@
           </section>
           <section id="membersChart">
             <h1>Member growth</h1>
-            <div id="chart"><svg /></div>
+            <iframe src="/memberchart"></iframe>
           </section>
           <section>
             <h1>First members</h1>
@@ -193,39 +193,6 @@
         parallaxBackgroundHorizontal: '',
         parallaxBackgroundVertical: ''
       });
-    </script>
-    <script>
-      Reveal.addEventListener( 'slidechanged', function( event ) {
-        switch(event.currentSlide.id) {
-          case 'membersChart': initChart(); break;
-        }
-      });
-
-      function initChart() {
-        if(window.chartInitialized) return;
-        window.chartInitialized = true;
-        barAndLine([
-          {
-            key: 'Growth',
-            bar: true,
-            color: '#ccf',
-            values: [
-              <%members.forEach(function (member) {%>
-                ['<%=member.year+'-'+member.month%>', <%=member.increase%>],
-              <%})%>
-            ]
-          },
-          {
-            key: 'Members',
-            color: '#000',
-            values: [
-              <%members.forEach(function (member) {%>
-                ['<%=member.year+'-'+member.month%>', <%=member.total%>],
-              <%})%>
-            ]
-          }
-        ]);
-      }
     </script>
   </body>
 </html>
