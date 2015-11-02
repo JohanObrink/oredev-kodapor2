@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html class="pink">
   <head>
     <title><%= title %></title>
     <link rel="stylesheet" href="/oredev-kodapor.css" />
   </head>
-  <body>
+  <body class="pink">
     <div class="reveal">
       <div class="slides">
         <!-- First -->
-        <section class="pink">
+        <section data-theme="pink">
           <section>
             <h1>WAT, poo and PHP flame wars</h1>
             <h3>This is Code Monkeys</h3> 
@@ -20,7 +20,7 @@
         </section>
 
         <!-- History -->
-        <section class="white">
+        <section data-theme="white">
           <section>
             <h1>Kodapor</h1>
             <p>Founded 7 Oct 2010</p>
@@ -55,8 +55,26 @@
             })%>
         </section>
 
+        <!-- companies -->
+        <section data-theme="orange">
+          <section>
+            <h1>Companies</h1>
+            <h3>with most members</h3>
+          </section>
+          <section>
+            <ol>
+              <%companies.forEach(function (company) {%>
+              <li>
+                <h5><%=company.name%></h5>
+                <%=company.members%> members
+              </li>
+              <%})%>
+            </ol>
+          </section>
+        </section>
+
         <!-- Most active -->
-        <section class="blue">
+        <section data-theme="blue">
           <section>
             <h1>Most active members</h1>
           </section>
@@ -135,11 +153,11 @@
     <script>
       Reveal.initialize({
         // Display controls in the bottom right corner
-        controls: true,
+        controls: false,
         // Display a presentation progress bar
         progress: true,
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: true,
         // Push each slide change to the browser history
         history: false,
         // Enable keyboard shortcuts for navigation
@@ -192,6 +210,12 @@
         // Number, e.g. 100
         parallaxBackgroundHorizontal: '',
         parallaxBackgroundVertical: ''
+      });
+
+      Reveal.addEventListener('slidechanged', function( event ) {
+        var theme = event.currentSlide.parentElement.getAttribute('data-theme') || 'white';
+        document.body.setAttribute('class', theme);
+        document.body.parentElement.setAttribute('class', theme);
       });
     </script>
   </body>

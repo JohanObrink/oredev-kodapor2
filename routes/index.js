@@ -27,7 +27,7 @@ router.get('/', function(req, res, next) {
     queries.topActive('likes'),
     queries.inactive(),
 
-    /*queries.topLiked(),
+    queries.topLiked(),
     queries.topLiked(true, true),
     queries.topLiked(true),
 
@@ -42,7 +42,7 @@ router.get('/', function(req, res, next) {
     queries.engagement('posts', 'comment_count', 20),
     queries.engagement('posts', 'like_count', 20),
     queries.engagement('posts', 'totalLikes', 20),
-    queries.engagement('comments', 'like_count', 20)*/
+    queries.engagement('comments', 'like_count', 20)
   ])
   .then(function (results) {
     res.render('index', {

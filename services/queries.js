@@ -1,6 +1,41 @@
 var r = require('rethinkdb'),
   moment = require('moment'),
-  httpUtil = require('./httpUtil');
+  httpUtil = require('./httpUtil'),
+  fs = require('fs-promise');
+
+function cache(func, file) {
+  return function () {
+    var args = Array.prototype.slice.call(arguments);
+    var dir = process.cwd() + '/cache';
+    var filename = [file].concat(args).join('-') + '.json';
+    var filepath = dir + '/' + filename;
+    return fs.exists(filepath)
+      .then(function (exists) {
+        if(!exists) {
+          return fs.exists(dir)
+            .then(function (exists) {
+              if(!exists) {
+                return fs.mkdir(dir);
+              }
+            })
+            .then(function () {
+              return func.apply(null, args);
+            })
+            .then(function (result) {
+              return fs.writeFile(filepath, JSON.stringify(result), {encoding: 'utf-8'})
+                .then(function () {
+                  return result;
+                });
+            })
+        } else {
+          return fs.readFile(filepath, {encoding: 'utf-8'})
+            .then(function (str) {
+              return JSON.parse(str);
+            });
+        }
+      });
+  }
+}
 
 function connect() {
   return r.connect({db: 'kodapor'});
@@ -260,13 +295,13 @@ function posts(limit) {
 }
 
 module.exports = {
-  first: first,
-  members: members,
-  topActive: topActive,
-  topLiked: topLiked,
-  inactive: inactive,
-  companies: companies,
-  topLinks: topLinks,
-  engagement: engagement,
-  posts: posts
+  first: cache(first, 'first'),
+  members: cache(members, 'members'),
+  topActive: cache(topActive, 'topActive'),
+  topLiked: cache(topLiked, 'topLiked'),
+  inactive: cache(inactive, 'inactive'),
+  companies: cache(companies, 'companies'),
+  topLinks: cache(topLinks, 'topLinks'),
+  engagement: cache(engagement, 'engagement'),
+  posts: cache(posts, 'posts')
 };

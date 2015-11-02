@@ -1,3 +1,33 @@
+html, body {
+  background-color: #fff;
+  color: #000;
+
+  &.white {
+    background-color: #fff;
+    color: #000;
+  }
+  &.black {
+    background-color: #000;
+    color: #fff;
+  }
+  &.pink {
+    background-color: #ff3b5c;
+    color: #fff;
+  }
+  &.blue {
+    background-color: #668cff;
+    color: #fff;
+  }
+  &.green {
+    background-color: #38ffa1;
+    color: #000;
+  }
+  &.orange {
+    background-color: #ff8600;
+    color: #000;
+  }
+}
+
 .reveal {
   body {
     -webkit-font-smoothing: antialiased;
@@ -6,7 +36,8 @@
     font-weight: 300;
     letter-spacing: 0.025em;
     line-height: 1.75em;
-    margin: 0; }
+    margin: 0;
+  }
 
   h1, h2, h3, h4 {
     font-family: 'Roboto', sans-serif;
@@ -34,7 +65,10 @@
   h4 {
     font-size: 2rem; }
 
-  p {
+  h5 {
+    font-size: 1.5rem; }
+
+  p, li {
     font-family: 'Roboto', sans-serif;
     font-size: 1.75rem;
     font-weight: 200;
