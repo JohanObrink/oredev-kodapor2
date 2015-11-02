@@ -86,7 +86,7 @@ function topActive(by) {
       });
   }
   query = query.orderBy(r.desc(by || 'score'))
-    .limit(10);
+    .limit(5);
 
   return connect()
     .then(function (conn) {

@@ -46,11 +46,21 @@
 
   section {
     text-align: left;
+
+    img {
+      float: left;
+      height: 200px;
+      padding-right: 50px;
+      &.tile {
+        height: 50px;
+        padding: 0;
+      }
+    }
   }
 }
 
 #chart {
-  svg { height: 800px; }
+  svg { height: 500px; }
 }
 
 nav {
