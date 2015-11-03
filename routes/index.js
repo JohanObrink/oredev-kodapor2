@@ -6,6 +6,7 @@ var express = require('express'),
 var pages = [
   {name: 'Members', href: '/members'},
   {name: 'First members', href: '/first'},
+  {name: 'Collage', href: '/collage'},
   {name: 'Most active members', href: '/active'},
   {name: 'Most liked members', href: '/liked'},
   {name: 'Companies', href: '/companies'},
@@ -31,10 +32,22 @@ router.get('/members', function(req, res, next) {
 });
 
 router.get('/first', function(req, res, next) {
-  queries.first()
+  queries.first(50)
     .then(function (members) {
       res.render('first', {
         title: 'First members',
+        members: members,
+        pages: pages
+      });
+    })
+    .catch(next);  
+});
+
+router.get('/collage', function(req, res, next) {
+  queries.first(1000)
+    .then(function (members) {
+      res.render('collage', {
+        title: 'Collage',
         members: members,
         pages: pages
       });
@@ -141,7 +154,9 @@ router.get('/engagement', function(req, res, next) {
 router.get('/posts', function(req, res, next) {
   queries.posts(50)
     .then(function (posts) {
-      res.send(posts.map(function (p) {
+      var payload = {language: "sv", texts: []};
+      
+      posts.map(function (p) {
         var body = p.message;
         if(p.description) {
           body += '\n' + p.description;
@@ -149,11 +164,10 @@ router.get('/posts', function(req, res, next) {
         p.comments.forEach(function (c) {
           body += '\n' + '\n' + c.message;
         });
-        return {
-          id: p.id,
-          body: body
-        };
-      }));
+        payload.texts.push({texts: p.id, body: body});
+      });
+      
+      res.send(payload);
     })
     .catch(next);  
 });
