@@ -178,7 +178,7 @@ router.get('/posts', function(req, res, next) {
         p.comments.forEach(function (c) {
           body += '\n' + '\n' + c.message;
         });
-        payload.texts.push({texts: p.id, body: body});
+        payload.texts.push({id: p.id, body: JSON.stringify(body).replace('"', '')});
       });
       
       res.send(payload);
