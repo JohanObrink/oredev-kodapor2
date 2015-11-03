@@ -1,0 +1,100 @@
+//colors
+$color_mine_shaft_approx: #333;
+$color_gravel_approx: #494949;
+$color_azure_approx: rgb(51, 102, 153);
+$red: #f00;
+$black: #000;
+$color_guardsman_red_approx: #c00;
+$color_dark_blue_approx: #00c;
+$white: white;
+$black_40: rgba(0, 0, 0, 0.4);
+
+//fonts
+$font_0: Consolas;
+$font_1: courier;
+
+body {
+	font-family: $font_0, $font_1;
+}
+svg {
+	*::selection {
+		background: transparent;
+	}
+	*::-moz-selection {
+		background: transparent;
+	}
+	*::-webkit-selection {
+		background: transparent;
+	}
+}
+rect {
+	&.selection {
+		stroke: $color_mine_shaft_approx;
+		stroke-dasharray: 4px;
+		stroke-opacity: 0.5;
+		fill: transparent;
+	}
+	&.cell-border {
+		stroke: $color_gravel_approx;
+		stroke-width: 2px;
+	}
+	&.cell-selected {
+		stroke: $color_azure_approx;
+		stroke-width: 0.5px;
+	}
+	&.cell-hover {
+		stroke: $red;
+		stroke-width: 0.3px;
+	}
+}
+text {
+	&.mono {
+		font-size: 9pt;
+		font-family: $font_0, $font_1;
+		fill: $black;
+	}
+	&.text-selected {
+		fill: $black;
+	}
+	&.text-highlight {
+		fill: $color_guardsman_red_approx;
+	}
+	&.text-hover {
+		fill: $color_dark_blue_approx;
+	}
+}
+#tooltip {
+	position: absolute;
+	width: 200px;
+	height: auto;
+	padding: 10px;
+	background-color: $white;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 3px;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 4px 4px 10px $black_40;
+	pointer-events: none;
+	&.hidden {
+		display: none;
+	}
+	p {
+		font-family: $font_0, $font_1;
+		font-size: 10px;
+	}
+}
+#pbar {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -50px;
+	margin-left: -50px;
+	width: 200px;
+	height: 200px;
+}
+​ {
+}
+#charttitle p {
+	color: $white;
+	margin: auto;
+	width: 80%;
+}
