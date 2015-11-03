@@ -24,7 +24,8 @@ gulp.task('concat', function () {
       'bower_components/progressbar.js/dist/progressbar.js',
       'bower_components/nvd3/build/nv.d3.js',
       'bower_components/reveal.js/js/reveal.js',
-      'src/**/*.js'
+      'src/**/*.js',
+      'src/gavagai.js'
     ])
     .pipe(sourcemaps.init())
     .pipe(concat('oredev-kodapor.js'))
