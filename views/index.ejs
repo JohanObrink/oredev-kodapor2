@@ -65,8 +65,10 @@
             <ol>
               <%companies.forEach(function (company) {%>
               <li>
-                <h5><%=company.name%></h5>
-                <%=company.members%> members
+                <h5>
+                  <%=company.name%>
+                  <span><%=company.members%> members</span>
+                </h5>
               </li>
               <%})%>
             </ol>
