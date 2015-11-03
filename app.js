@@ -65,7 +65,7 @@ app.use(function(err, req, res, next) {
 
 app.use(GAVAGAI_API_ENDPOINT, function(req, res, next) {
     var options = {
-        hostname: 'https://api.gavagai.se/',
+        hostname: 'api.gavagai.se/',
         port: 443,
         path: GAVAGAI_API_ENDPOINT + req.url,
         method: 'POST',
