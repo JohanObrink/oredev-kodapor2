@@ -168,7 +168,9 @@ router.get('/engagement', function(req, res, next) {
 router.get('/posts', function(req, res, next) {
   queries.posts(50)
     .then(function (posts) {
-      res.send(posts.map(function (p) {
+      var payload = {language: "sv", texts: []};
+      
+      posts.map(function (p) {
         var body = p.message;
         if(p.description) {
           body += '\n' + p.description;
@@ -176,13 +178,16 @@ router.get('/posts', function(req, res, next) {
         p.comments.forEach(function (c) {
           body += '\n' + '\n' + c.message;
         });
-        return {
-          id: p.id,
-          body: body
-        };
-      }));
+        payload.texts.push({id: p.id, body: JSON.stringify(body).replace('"', '')});
+      });
+      
+      res.send(payload);
     })
     .catch(next);  
+});
+
+router.get('/heatmap', function(req, res, next) {
+  res.render('heatmap');
 });
 
 module.exports = router;

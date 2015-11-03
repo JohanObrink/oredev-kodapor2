@@ -9,6 +9,7 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+var GAVAGAI_API_ENDPOINT = '/v3';
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -17,7 +18,7 @@ app.set('view engine', 'ejs');
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
-app.use(bodyParser.json());
+app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(require('node-sass-middleware')({
@@ -60,6 +61,43 @@ app.use(function(err, req, res, next) {
     message: err.message,
     error: {}
   });
+});
+
+app.use(GAVAGAI_API_ENDPOINT, function(req, res, next) {
+    var options = {
+        hostname: 'https://api.gavagai.se/',
+        port: 443,
+        path: GAVAGAI_API_ENDPOINT + req.url,
+        method: 'POST',
+        headers: {
+            'Content-Type': CONTENT_TYPE
+        }
+    },
+    body = '';
+
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+
+    console.log(new Date(), ' -- Rquest Received:', req.body, req.url);
+
+    var requ = https.request(options, function(https_res) {
+        console.log(new Date(), 'statusCode: ', https_res.statusCode);
+        console.log(new Date(), 'headers: ', https_res.headers);
+
+        https_res.on('data', function(d) {
+            body += d;
+        });
+
+        https_res.on('end', function() {
+            res.send(body);
+            console.log(new Date(), 'Sent request: ', req.body);
+            next();
+        });
+
+    });
+
+    requ.write(JSON.stringify(req.body));
+    requ.end();
 });
 
 
