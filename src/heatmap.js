@@ -129,7 +129,7 @@ function drawmap() {
             d3.select(this).classed("text-hover", false);
         })
         .on("click", function(d, i) {
-            window.open(d);
+            //window.open(d);
         });
 
     var colLabels = svg.append("g")

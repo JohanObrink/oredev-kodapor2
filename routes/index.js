@@ -1,7 +1,8 @@
 var express = require('express'),
   router = express.Router(),
   r = require('rethinkdb'),
-  queries = require('../services/queries');
+  queries = require('../services/queries'),
+  https = require('https');
 
 var pages = [
   {name: 'Members', href: '/members'},
@@ -169,16 +170,25 @@ router.get('/posts', function(req, res, next) {
   queries.posts(50)
     .then(function (posts) {
       var payload = {language: "sv", texts: []};
+      var max_payload = false;
       
       posts.map(function (p) {
-        var body = p.message;
-        if(p.description) {
-          body += '\n' + p.description;
+        if ('message' in p) {
+          var body = p.message;
+          if(p.description) {
+            body += '\n' + p.description;
+          }
+
+          // p.comments.forEach(function (c) {
+          //   while (encodeURI(body).split(/%..|./).length - 1 < 1000000) {
+          //     body += '\n' + '\n' + c.message;  
+          //   }
+          // });
+          
+          if (typeof body !== undefined) {
+            payload.texts.push({id: p.id, body: JSON.stringify(body).replace('"', '')}); 
+          } 
         }
-        p.comments.forEach(function (c) {
-          body += '\n' + '\n' + c.message;
-        });
-        payload.texts.push({id: p.id, body: JSON.stringify(body).replace('"', '')});
       });
       
       res.send(payload);
@@ -188,6 +198,47 @@ router.get('/posts', function(req, res, next) {
 
 router.get('/heatmap', function(req, res, next) {
   res.render('heatmap');
+});
+
+router.get('/wordcloud', function(req, res, next) {
+  res.render('wordcloud');
+});
+
+router.use('/v3/tonality', function(req, res, next) {
+    var options = {
+        hostname: 'api.gavagai.se',
+        port: 443,
+        path: '/v3/tonality' + req.url,
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    },
+    body = '';
+
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+
+    console.log(new Date(), ' -- Rquest Received:', req.body, req.url);
+
+    var requ = https.request(options, function(https_res) {
+        console.log(new Date(), 'statusCode: ', https_res.statusCode);
+        console.log(new Date(), 'headers: ', https_res.headers);
+
+        https_res.on('data', function(d) {
+            body += d;
+        });
+
+        https_res.on('end', function() {
+            res.send(body);
+            console.log(new Date(), 'Sent request: ', req.body);
+            next();
+        });
+
+    });
+
+    requ.write(JSON.stringify(req.body));
+    requ.end();
 });
 
 module.exports = router;
