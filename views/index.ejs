@@ -1,11 +1,222 @@
 <!DOCTYPE html>
-<html>
+<html class="pink">
   <head>
     <title><%= title %></title>
     <link rel="stylesheet" href="/oredev-kodapor.css" />
   </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+  <body class="pink">
+    <div class="reveal">
+      <div class="slides">
+        <!-- First -->
+        <section data-theme="pink">
+          <section>
+            <h1>WAT, poo and PHP flame wars</h1>
+            <h3>This is Code Monkeys</h3> 
+          </section>
+          <section>
+            <h1>Johan Öbrink</h1>
+            <h3>Technical Creative Director @ ITEAM</h3>
+          </section>
+        </section>
+
+        <!-- History -->
+        <section data-theme="white">
+          <section>
+            <h1>Kodapor</h1>
+            <p>Founded 7 Oct 2010</p>
+          </section>
+          <section id="membersChart">
+            <h1>Member growth</h1>
+            <iframe src="/memberchart"></iframe>
+          </section>
+          <section>
+            <h1>First members</h1>
+          </section>
+          <%first.slice(0, 10).forEach(function (member) {%>
+            <section>
+              <img src="<%=member.image%>" />
+              <h3><%=member.name%></h3>
+              <h4><%=member.title%></h4>
+              <p><%=member.joined%></p>
+            </section>
+          <%})%>
+          <%
+          var imagesPerPage = 10 * 19;
+          first.slice(10, 1000).forEach(function (member, ix, arr) {
+            if(ix === 0 || (ix > 1 && ix%imagesPerPage === 1)) {
+              %><section><%
+            }%><img
+              class="tile"
+              src="<%=member.image%>"
+              title="<%=(ix+1)%> <%=member.name%> [<%=member.joined%>]"
+              /><%
+            if(ix > 0 && ix%imagesPerPage === 0 || ix === arr.length-1) {
+              %></section><%}
+            })%>
+        </section>
+
+        <!-- companies -->
+        <section data-theme="orange">
+          <section>
+            <h1>Companies</h1>
+            <h3>with most members</h3>
+          </section>
+          <section>
+            <ol>
+              <%companies.forEach(function (company) {%>
+              <li>
+                <h5><%=company.name%></h5>
+                <%=company.members%> members
+              </li>
+              <%})%>
+            </ol>
+          </section>
+        </section>
+
+        <!-- Most active -->
+        <section data-theme="blue">
+          <section>
+            <h1>Most active members</h1>
+          </section>
+          <!-- Posts -->
+          <section>
+            <h1>By number of posts</h1>
+          </section>
+          <%activePosts.forEach(function (member) {%>
+            <section>
+              <img src="<%=member.image%>" />
+              <h3><%=member.name%></h3>
+              <p>
+                <b>Posts:</b> <%=member.posts%><br />
+                <b>Comments:</b> <%=member.comments%><br />
+                <b>Likes:</b> <%=member.likes%><br />
+              </p>
+            </section>
+          <%})%>
+          <!-- Comments -->
+          <section>
+            <h1>By number of Comments</h1>
+          </section>
+          <%activeComments.forEach(function (member) {%>
+            <section>
+              <img src="<%=member.image%>" />
+              <h3><%=member.name%></h3>
+              <p>
+                <b>Posts:</b> <%=member.posts%><br />
+                <b>Comments:</b> <%=member.comments%><br />
+                <b>Likes:</b> <%=member.likes%><br />
+              </p>
+            </section>
+          <%})%>
+          <!-- Likes -->
+          <section>
+            <h1>By number of Likes</h1>
+          </section>
+          <%activeLikes.forEach(function (member) {%>
+            <section>
+              <img src="<%=member.image%>" />
+              <h3><%=member.name%></h3>
+              <p>
+                <b>Posts:</b> <%=member.posts%><br />
+                <b>Comments:</b> <%=member.comments%><br />
+                <b>Likes:</b> <%=member.likes%><br />
+              </p>
+            </section>
+            <%})%>
+          <!-- Score -->
+          <section>
+            <h1>By weighted score</h1>
+            <p>score = posts + 0.5 * comments + 0.1 * likes</p>
+          </section>
+          <%activeScore.forEach(function (member) {%>
+            <section>
+              <img src="<%=member.image%>" />
+              <h3><%=member.name%></h3>
+              <p>
+                <b>Score:</b> <%=member.score%><br />
+                <b>Posts:</b> <%=member.posts%><br />
+                <b>Comments:</b> <%=member.comments%><br />
+                <b>Likes:</b> <%=member.likes%><br />
+              </p>
+            </section>
+          <%})%>
+          <!-- Inactive -->
+          <section>
+            <h1>Inactive members</h1>
+            <h3>No posts, comments or likes</h3>
+            <p><%=activeInactive%></p>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="/oredev-kodapor.js"></script>
+    <script>
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: false,
+        // Display a presentation progress bar
+        progress: true,
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Push each slide change to the browser history
+        history: false,
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+        // Enable the slide overview mode
+        overview: true,
+        // Vertical centering of slides
+        center: true,
+        // Enables touch navigation on devices with touch input
+        touch: true,
+        // Loop the presentation
+        loop: false,
+        // Change the presentation direction to be RTL
+        rtl: false,
+        // Turns fragments on and off globally
+        fragments: true,
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+        // Hides the address bar on mobile devices
+        hideAddressBar: true,
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+        // Transition style
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        // Transition speed
+        transitionSpeed: 'default', // default/fast/slow
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+        // Parallax background image
+        parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+        // Parallax background size
+        parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
+        // Amount to move parallax background (horizontal and vertical) on slide change
+        // Number, e.g. 100
+        parallaxBackgroundHorizontal: '',
+        parallaxBackgroundVertical: ''
+      });
+
+      Reveal.addEventListener('slidechanged', function( event ) {
+        var theme = event.currentSlide.parentElement.getAttribute('data-theme') || 'white';
+        document.body.setAttribute('class', theme);
+        document.body.parentElement.setAttribute('class', theme);
+      });
+    </script>
   </body>
 </html>
