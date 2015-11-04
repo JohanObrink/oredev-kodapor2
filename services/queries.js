@@ -265,10 +265,17 @@ function topLinks(byDomain, byLikes) {
 function engagement(type, orderBy, limit) {
   return connect()
     .then(function (conn) {
-      return r.table(type)
+      var query = r.table(type)
         .orderBy({index: r.desc(orderBy)})
-        .limit(limit)
-        .run(conn);
+        .limit(limit);
+
+      if(type === 'posts' && orderBy === 'comment_count') {
+        query = query.merge(function (p) {
+          return r.db('kodapor').table('tonality').get(p('id'))
+        });
+      }
+
+      return query.run(conn);
     })
     .then(function (cursor) {
       return cursor.toArray();

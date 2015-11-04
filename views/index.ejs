@@ -291,6 +291,14 @@ function list(arr, html) {
           <%engagementPostsByComments.forEach(function (post) {%>
             <section>
               <p><%=post.message%></p>
+              <ul>
+                <%post.tonality.forEach(function (tonality) {%>
+                <li>
+                  <%=tonality.tone%>:
+                  <%=tonality.score%>
+                </li>
+                <%})%>
+              </ul>
               <b>Comments:</b> <%=post.comment_count%><br />
               <b>Likes:</b> <%=post.like_count%><br />
               <b>Likes on comments:</b> <%=post.comment_like_count%>

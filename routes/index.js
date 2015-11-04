@@ -39,7 +39,7 @@ router.get('/', function(req, res, next) {
     queries.companies(true),
 
     queries.engagement('posts', 'comment_count', 10),
-    queries.engagement('posts', 'like_count', 10),
+    queries.engagement('posts', 'like_count', 5),
     queries.engagement('comments', 'like_count', 5)
   ])
   .then(function (results) {
@@ -102,88 +102,6 @@ router.get('/commentchart', function(req, res, next) {
       res.render('chart', {
         title: 'Comments',
         data: data
-      });
-    })
-    .catch(next);  
-});
-
-router.get('/growth', function(req, res, next) {
-  queries.growth('members')
-    .then(function (data) {
-      res.send(data);
-    })
-    .catch(next);  
-});
-
-router.get('/liked', function(req, res, next) {
-  Promise.all([
-      queries.topLiked(),
-      queries.topLiked(true, true),
-      queries.topLiked(true)
-    ])
-    .then(function (values) {
-      res.render('liked', {
-        title: 'Most liked members',
-        likedNominal: values[0],
-        likedActive: values[1],
-        liked: values[2],
-        pages: pages
-      });
-    })
-    .catch(next);  
-});
-
-router.get('/links', function(req, res, next) {
-  Promise.all([
-      queries.topLinks(),
-      queries.topLinks(true),
-      queries.topLinks(false, true),
-      queries.topLinks(true, true)
-    ])
-    .then(function (values) {
-      res.render('links', {
-        title: 'Most posted links',
-        links: values[0],
-        domains: values[1],
-        likedLinks: values[2],
-        likedDomains: values[3],
-        pages: pages
-      });
-    })
-    .catch(next);  
-});
-
-router.get('/companies', function(req, res, next) {
-  Promise.all([
-      queries.companies(),
-      queries.companies(true)
-    ])
-    .then(function (values) {
-      res.render('companies', {
-        title: 'Companies',
-        companies: values[0],
-        active: values[1],
-        pages: pages
-      });
-    })
-    .catch(next);  
-});
-
-router.get('/engagement', function(req, res, next) {
-  Promise.all([
-      queries.engagement('posts', 'comment_count', 20),
-      queries.engagement('posts', 'like_count', 20),
-      queries.engagement('posts', 'totalLikes', 20),
-      queries.engagement('comments', 'like_count', 20)
-    ])
-    .then(function (values) {
-      res.render('engagement', {
-        title: 'Most Engaging posts',
-        postsByComments: values[0],
-        postsByLikes: values[1],
-        postsByTotalLikes: values[2],
-        commentsByLikes: values[3],
-        pages: pages
       });
     })
     .catch(next);  
