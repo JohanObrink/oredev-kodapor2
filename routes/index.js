@@ -167,10 +167,9 @@ router.get('/engagement', function(req, res, next) {
 });
 
 router.get('/posts', function(req, res, next) {
-  queries.posts(50)
+  queries.posts(30)
     .then(function (posts) {
       var payload = {language: "sv", texts: []};
-      var max_payload = false;
       
       posts.map(function (p) {
         if ('message' in p) {
@@ -179,11 +178,9 @@ router.get('/posts', function(req, res, next) {
             body += '\n' + p.description;
           }
 
-          // p.comments.forEach(function (c) {
-          //   while (encodeURI(body).split(/%..|./).length - 1 < 1000000) {
-          //     body += '\n' + '\n' + c.message;  
-          //   }
-          // });
+          p.comments.forEach(function (c) {
+              body += '\n' + '\n' + c.message;  
+          });
           
           if (typeof body !== undefined) {
             payload.texts.push({id: p.id, body: JSON.stringify(body).replace('"', '')}); 

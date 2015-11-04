@@ -5,43 +5,43 @@ var rawData = {
       "tonality": [
         {
           "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 19,
+          "normalizedScore": 0.019279962
         },
         {
           "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 32.103394,
+          "normalizedScore": 0.032576434
         },
         {
           "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 232.47002,
+          "normalizedScore": 0.23589544
         },
         {
           "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 13.210336,
+          "normalizedScore": 0.013404989
         },
         {
           "tone": "positivity",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 341.9,
+          "normalizedScore": 0.34693787
         },
         {
           "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 20,
+          "normalizedScore": 0.020294698
         },
         {
           "tone": "skepticism",
-          "score": 2,
-          "normalizedScore": 1
+          "score": 310.79535,
+          "normalizedScore": 0.31537488
         },
         {
           "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 16,
+          "normalizedScore": 0.016235758
         }
       ]
     },
@@ -50,43 +50,43 @@ var rawData = {
       "tonality": [
         {
           "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 3,
+          "normalizedScore": 0.0070621776
         },
         {
           "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 14,
+          "normalizedScore": 0.032956827
         },
         {
           "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 55.13,
+          "normalizedScore": 0.12977928
         },
         {
           "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 8,
+          "normalizedScore": 0.018832473
         },
         {
           "tone": "positivity",
-          "score": 2,
-          "normalizedScore": 1
+          "score": 214.76,
+          "normalizedScore": 0.5055577
         },
         {
           "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 11,
+          "normalizedScore": 0.025894651
         },
         {
           "tone": "skepticism",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 115.908134,
+          "normalizedScore": 0.2728546
         },
         {
           "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 3,
+          "normalizedScore": 0.0070621776
         }
       ]
     },
@@ -95,43 +95,43 @@ var rawData = {
       "tonality": [
         {
           "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 2,
+          "normalizedScore": 0.0046136673
         },
         {
           "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 12,
+          "normalizedScore": 0.027682004
         },
         {
           "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 63.130005,
+          "normalizedScore": 0.14563042
         },
         {
           "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 3,
+          "normalizedScore": 0.006920501
         },
         {
           "tone": "positivity",
-          "score": 1,
-          "normalizedScore": 0.5
+          "score": 194.88998,
+          "normalizedScore": 0.44957876
         },
         {
           "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 18,
+          "normalizedScore": 0.041523006
         },
         {
           "tone": "skepticism",
-          "score": 1,
-          "normalizedScore": 0.5
+          "score": 135.47464,
+          "normalizedScore": 0.31251746
         },
         {
           "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 5,
+          "normalizedScore": 0.011534168
         }
       ]
     },
@@ -140,43 +140,43 @@ var rawData = {
       "tonality": [
         {
           "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 25,
+          "normalizedScore": 0.05548806
         },
         {
           "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 8,
+          "normalizedScore": 0.017756179
         },
         {
           "tone": "negativity",
-          "score": 1,
-          "normalizedScore": 0.4519318
+          "score": 156.2,
+          "normalizedScore": 0.3466894
         },
         {
           "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 33.696804,
+          "normalizedScore": 0.07479081
         },
         {
           "tone": "positivity",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 85.53999,
+          "normalizedScore": 0.18985794
         },
         {
           "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 5,
+          "normalizedScore": 0.011097613
         },
         {
           "tone": "skepticism",
-          "score": 1.2127231,
-          "normalizedScore": 0.54806817
+          "score": 120.110565,
+          "normalizedScore": 0.2665881
         },
         {
           "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 17,
+          "normalizedScore": 0.037731882
         }
       ]
     },
@@ -185,43 +185,43 @@ var rawData = {
       "tonality": [
         {
           "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 1,
+          "normalizedScore": 0.003706863
         },
         {
           "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 7.103396,
+          "normalizedScore": 0.026331315
         },
         {
           "tone": "negativity",
-          "score": 1,
-          "normalizedScore": 0.5
+          "score": 66.3,
+          "normalizedScore": 0.24576502
         },
         {
           "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 2.1720629,
+          "normalizedScore": 0.008051539
         },
         {
           "tone": "positivity",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 111.189995,
+          "normalizedScore": 0.41216606
         },
         {
           "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 19,
+          "normalizedScore": 0.07043039
         },
         {
           "tone": "skepticism",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 40.004425,
+          "normalizedScore": 0.14829092
         },
         {
           "tone": "hate",
-          "score": 1,
-          "normalizedScore": 0.5
+          "score": 23,
+          "normalizedScore": 0.08525784
         }
       ]
     },
@@ -240,8 +240,8 @@ var rawData = {
         },
         {
           "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 3,
+          "normalizedScore": 0.13422818
         },
         {
           "tone": "violence",
@@ -250,8 +250,8 @@ var rawData = {
         },
         {
           "tone": "positivity",
-          "score": 2,
-          "normalizedScore": 1
+          "score": 16.35,
+          "normalizedScore": 0.7315436
         },
         {
           "tone": "love",
@@ -260,8 +260,8 @@ var rawData = {
         },
         {
           "tone": "skepticism",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 3,
+          "normalizedScore": 0.13422818
         },
         {
           "tone": "hate",
@@ -275,43 +275,43 @@ var rawData = {
       "tonality": [
         {
           "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 5,
+          "normalizedScore": 0.010002084
         },
         {
           "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 33,
+          "normalizedScore": 0.06601375
         },
         {
           "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 95.799995,
+          "normalizedScore": 0.19163993
         },
         {
           "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 8,
+          "normalizedScore": 0.016003335
         },
         {
           "tone": "positivity",
-          "score": 2,
-          "normalizedScore": 1
+          "score": 223.69002,
+          "normalizedScore": 0.4474733
         },
         {
           "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 21,
+          "normalizedScore": 0.042008754
         },
         {
           "tone": "skepticism",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 105.40582,
+          "normalizedScore": 0.21085559
         },
         {
           "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 8,
+          "normalizedScore": 0.016003335
         }
       ]
     },
@@ -320,43 +320,43 @@ var rawData = {
       "tonality": [
         {
           "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 2,
+          "normalizedScore": 0.008825056
         },
         {
           "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 15,
+          "normalizedScore": 0.06618792
         },
         {
           "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 48.169994,
+          "normalizedScore": 0.21255144
         },
         {
           "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 5,
+          "normalizedScore": 0.02206264
         },
         {
           "tone": "positivity",
-          "score": 2,
-          "normalizedScore": 0.9493272
+          "score": 108.46999,
+          "normalizedScore": 0.47862688
         },
         {
           "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 4,
+          "normalizedScore": 0.017650113
         },
         {
           "tone": "skepticism",
-          "score": 0.10675514,
-          "normalizedScore": 0.050672777
+          "score": 40.987476,
+          "normalizedScore": 0.18085839
         },
         {
           "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 3,
+          "normalizedScore": 0.013237584
         }
       ]
     },
@@ -370,38 +370,38 @@ var rawData = {
         },
         {
           "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 15,
+          "normalizedScore": 0.10681588
         },
         {
           "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 11.25,
+          "normalizedScore": 0.08011191
         },
         {
           "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 3,
+          "normalizedScore": 0.021363176
         },
         {
           "tone": "positivity",
-          "score": 3,
-          "normalizedScore": 1
+          "score": 86.74,
+          "normalizedScore": 0.6176806
         },
         {
           "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 8,
+          "normalizedScore": 0.05696847
         },
         {
           "tone": "skepticism",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 15.438555,
+          "normalizedScore": 0.10993885
         },
         {
           "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 1,
+          "normalizedScore": 0.0071210586
         }
       ]
     },
@@ -415,13 +415,13 @@ var rawData = {
         },
         {
           "tone": "desire",
-          "score": 2,
-          "normalizedScore": 0.33333334
+          "score": 6,
+          "normalizedScore": 0.10013875
         },
         {
           "tone": "negativity",
-          "score": 1,
-          "normalizedScore": 0.16666667
+          "score": 11,
+          "normalizedScore": 0.18358772
         },
         {
           "tone": "violence",
@@ -430,23 +430,23 @@ var rawData = {
         },
         {
           "tone": "positivity",
-          "score": 3,
-          "normalizedScore": 0.5
+          "score": 33.760002,
+          "normalizedScore": 0.5634474
         },
         {
           "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 2,
+          "normalizedScore": 0.033379585
         },
         {
           "tone": "skepticism",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 6.156862,
+          "normalizedScore": 0.102756746
         },
         {
           "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 1,
+          "normalizedScore": 0.016689792
         }
       ]
     },
@@ -455,43 +455,43 @@ var rawData = {
       "tonality": [
         {
           "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 2,
+          "normalizedScore": 0.007870718
         },
         {
           "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 10,
+          "normalizedScore": 0.03935359
         },
         {
           "tone": "negativity",
-          "score": 2,
-          "normalizedScore": 0.6666667
+          "score": 51.75,
+          "normalizedScore": 0.20365484
         },
         {
           "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 2,
+          "normalizedScore": 0.007870718
         },
         {
           "tone": "positivity",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 114.11999,
+          "normalizedScore": 0.44910315
         },
         {
           "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 17,
+          "normalizedScore": 0.0669011
         },
         {
           "tone": "skepticism",
-          "score": 1,
-          "normalizedScore": 0.33333334
+          "score": 53.236412,
+          "normalizedScore": 0.2095044
         },
         {
           "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 4,
+          "normalizedScore": 0.015741436
         }
       ]
     },
@@ -500,43 +500,43 @@ var rawData = {
       "tonality": [
         {
           "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 3,
+          "normalizedScore": 0.0130798705
         },
         {
           "tone": "desire",
-          "score": 1,
-          "normalizedScore": 0.5
+          "score": 11,
+          "normalizedScore": 0.047959525
         },
         {
           "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 57.57,
+          "normalizedScore": 0.2510027
         },
         {
           "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 1,
+          "normalizedScore": 0.004359957
         },
         {
           "tone": "positivity",
-          "score": 1,
-          "normalizedScore": 0.5
+          "score": 99.3,
+          "normalizedScore": 0.4329437
         },
         {
           "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 2,
+          "normalizedScore": 0.008719914
         },
         {
           "tone": "skepticism",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 54.49009,
+          "normalizedScore": 0.23757443
         },
         {
           "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 1,
+          "normalizedScore": 0.004359957
         }
       ]
     },
@@ -545,43 +545,43 @@ var rawData = {
       "tonality": [
         {
           "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 1,
+          "normalizedScore": 0.0050420454
         },
         {
           "tone": "desire",
-          "score": 1,
-          "normalizedScore": 0.33333334
+          "score": 23,
+          "normalizedScore": 0.11596704
         },
         {
           "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 18.61,
+          "normalizedScore": 0.09383246
         },
         {
           "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 2,
+          "normalizedScore": 0.010084091
         },
         {
           "tone": "positivity",
-          "score": 1,
-          "normalizedScore": 0.33333334
+          "score": 97.22,
+          "normalizedScore": 0.49018764
         },
         {
           "tone": "love",
-          "score": 1,
-          "normalizedScore": 0.33333334
+          "score": 27,
+          "normalizedScore": 0.13613522
         },
         {
           "tone": "skepticism",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 26.502213,
+          "normalizedScore": 0.13362536
         },
         {
           "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 3,
+          "normalizedScore": 0.015126136
         }
       ]
     },
@@ -590,43 +590,43 @@ var rawData = {
       "tonality": [
         {
           "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 2,
+          "normalizedScore": 0.0086352
         },
         {
           "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 4,
+          "normalizedScore": 0.0172704
         },
         {
           "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 56.579998,
+          "normalizedScore": 0.2442898
         },
         {
           "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 4,
+          "normalizedScore": 0.0172704
         },
         {
           "tone": "positivity",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 113.35,
+          "normalizedScore": 0.48939994
         },
         {
           "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 4,
+          "normalizedScore": 0.0172704
         },
         {
           "tone": "skepticism",
-          "score": 2,
-          "normalizedScore": 1
+          "score": 44.68016,
+          "normalizedScore": 0.19291106
         },
         {
           "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 3,
+          "normalizedScore": 0.0129528
         }
       ]
     },
@@ -640,13 +640,13 @@ var rawData = {
         },
         {
           "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 9,
+          "normalizedScore": 0.108767726
         },
         {
           "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 7.36,
+          "normalizedScore": 0.08894783
         },
         {
           "tone": "violence",
@@ -655,18 +655,18 @@ var rawData = {
         },
         {
           "tone": "positivity",
-          "score": 1,
-          "normalizedScore": 1
+          "score": 51.94,
+          "normalizedScore": 0.62771064
         },
         {
           "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 6,
+          "normalizedScore": 0.072511815
         },
         {
           "tone": "skepticism",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 8.445126,
+          "normalizedScore": 0.102061905
         },
         {
           "tone": "hate",
@@ -680,43 +680,43 @@ var rawData = {
       "tonality": [
         {
           "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 4,
+          "normalizedScore": 0.01453186
         },
         {
           "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 4,
+          "normalizedScore": 0.01453186
         },
         {
           "tone": "negativity",
-          "score": 1,
-          "normalizedScore": 0.14285715
+          "score": 87.07,
+          "normalizedScore": 0.31632227
         },
         {
           "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 7,
+          "normalizedScore": 0.025430756
         },
         {
           "tone": "positivity",
-          "score": 5,
-          "normalizedScore": 0.71428573
+          "score": 110.149994,
+          "normalizedScore": 0.40017107
         },
         {
           "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 8,
+          "normalizedScore": 0.02906372
         },
         {
           "tone": "skepticism",
-          "score": 1,
-          "normalizedScore": 0.14285715
+          "score": 47.037277,
+          "normalizedScore": 0.17088479
         },
         {
           "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 8,
+          "normalizedScore": 0.02906372
         }
       ]
     },
@@ -735,33 +735,33 @@ var rawData = {
         },
         {
           "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 36.4,
+          "normalizedScore": 0.28888085
         },
         {
           "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 2.2335129,
+          "normalizedScore": 0.0177258
         },
         {
           "tone": "positivity",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 54.37,
+          "normalizedScore": 0.4314959
         },
         {
           "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 7,
+          "normalizedScore": 0.05555401
         },
         {
           "tone": "skepticism",
-          "score": 1,
-          "normalizedScore": 1
+          "score": 23,
+          "normalizedScore": 0.1825346
         },
         {
           "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 3,
+          "normalizedScore": 0.023808861
         }
       ]
     },
@@ -775,38 +775,38 @@ var rawData = {
         },
         {
           "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 15,
+          "normalizedScore": 0.051556967
         },
         {
           "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 38.74,
+          "normalizedScore": 0.13315447
         },
         {
           "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 2,
+          "normalizedScore": 0.0068742624
         },
         {
           "tone": "positivity",
-          "score": 2,
-          "normalizedScore": 1
+          "score": 162.37,
+          "normalizedScore": 0.558087
         },
         {
           "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 8,
+          "normalizedScore": 0.02749705
         },
         {
           "tone": "skepticism",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 62.83031,
+          "normalizedScore": 0.21595602
         },
         {
           "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 2,
+          "normalizedScore": 0.0068742624
         }
       ]
     },
@@ -820,38 +820,38 @@ var rawData = {
         },
         {
           "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 4,
+          "normalizedScore": 0.03133382
         },
         {
           "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 20.619999,
+          "normalizedScore": 0.16152583
         },
         {
           "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 1,
+          "normalizedScore": 0.007833455
         },
         {
           "tone": "positivity",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 63.8,
+          "normalizedScore": 0.49977443
         },
         {
           "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 4,
+          "normalizedScore": 0.03133382
         },
         {
           "tone": "skepticism",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 31.23759,
+          "normalizedScore": 0.24469826
         },
         {
           "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 3,
+          "normalizedScore": 0.023500364
         }
       ]
     },
@@ -860,43 +860,43 @@ var rawData = {
       "tonality": [
         {
           "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 1,
+          "normalizedScore": 0.004545398
         },
         {
           "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 8,
+          "normalizedScore": 0.036363184
         },
         {
           "tone": "negativity",
-          "score": 7,
-          "normalizedScore": 0.7777778
+          "score": 49.9,
+          "normalizedScore": 0.22681537
         },
         {
           "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 3,
+          "normalizedScore": 0.013636194
         },
         {
           "tone": "positivity",
-          "score": 2,
-          "normalizedScore": 0.22222222
+          "score": 106.02,
+          "normalizedScore": 0.4819031
         },
         {
           "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 5.40796,
+          "normalizedScore": 0.024581332
         },
         {
           "tone": "skepticism",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 41.674778,
+          "normalizedScore": 0.18942846
         },
         {
           "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 5,
+          "normalizedScore": 0.02272699
         }
       ]
     },
@@ -910,38 +910,38 @@ var rawData = {
         },
         {
           "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 7,
+          "normalizedScore": 0.045424517
         },
         {
           "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 23.71,
+          "normalizedScore": 0.15385932
         },
         {
           "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 1,
+          "normalizedScore": 0.006489217
         },
         {
           "tone": "positivity",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 83.649994,
+          "normalizedScore": 0.54282296
         },
         {
           "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 13,
+          "normalizedScore": 0.08435982
         },
         {
           "tone": "skepticism",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 23.741816,
+          "normalizedScore": 0.15406579
         },
         {
           "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 2,
+          "normalizedScore": 0.012978434
         }
       ]
     },
@@ -955,38 +955,38 @@ var rawData = {
         },
         {
           "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 8,
+          "normalizedScore": 0.06967658
         },
         {
           "tone": "negativity",
-          "score": 2.25,
-          "normalizedScore": 1
+          "score": 28.980001,
+          "normalizedScore": 0.2524034
         },
         {
           "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 5,
+          "normalizedScore": 0.04354786
         },
         {
           "tone": "positivity",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 44.42,
+          "normalizedScore": 0.38687918
         },
         {
           "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 1,
+          "normalizedScore": 0.008709572
         },
         {
           "tone": "skepticism",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 25.416197,
+          "normalizedScore": 0.2213642
         },
         {
           "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 2,
+          "normalizedScore": 0.017419145
         }
       ]
     },
@@ -1000,13 +1000,13 @@ var rawData = {
         },
         {
           "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 3,
+          "normalizedScore": 0.04897002
         },
         {
           "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 3,
+          "normalizedScore": 0.04897002
         },
         {
           "tone": "violence",
@@ -1015,18 +1015,18 @@ var rawData = {
         },
         {
           "tone": "positivity",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 44.870003,
+          "normalizedScore": 0.7324283
         },
         {
           "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 1,
+          "normalizedScore": 0.016323341
         },
         {
           "tone": "skepticism",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 9.391967,
+          "normalizedScore": 0.15330827
         },
         {
           "tone": "hate",
@@ -1045,38 +1045,38 @@ var rawData = {
         },
         {
           "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 11.103395,
+          "normalizedScore": 0.048480123
         },
         {
           "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 39.710003,
+          "normalizedScore": 0.17338353
         },
         {
           "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 2,
+          "normalizedScore": 0.0087324865
         },
         {
           "tone": "positivity",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 95.94001,
+          "normalizedScore": 0.41889742
         },
         {
           "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 8,
+          "normalizedScore": 0.034929946
         },
         {
           "tone": "skepticism",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 70.27643,
+          "normalizedScore": 0.30684397
         },
         {
           "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 2,
+          "normalizedScore": 0.0087324865
         }
       ]
     },
@@ -1085,43 +1085,43 @@ var rawData = {
       "tonality": [
         {
           "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 4,
+          "normalizedScore": 0.017996263
         },
         {
           "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 8,
+          "normalizedScore": 0.035992526
         },
         {
           "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 63.469997,
+          "normalizedScore": 0.2855557
         },
         {
           "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 4,
+          "normalizedScore": 0.017996263
         },
         {
           "tone": "positivity",
-          "score": 2,
-          "normalizedScore": 0.6666667
+          "score": 76.36,
+          "normalizedScore": 0.34354866
         },
         {
           "tone": "love",
-          "score": 1,
-          "normalizedScore": 0.33333334
+          "score": 2,
+          "normalizedScore": 0.008998131
         },
         {
           "tone": "skepticism",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 59.438366,
+          "normalizedScore": 0.2674171
         },
         {
           "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 5,
+          "normalizedScore": 0.022495328
         }
       ]
     },
@@ -1135,13 +1135,13 @@ var rawData = {
         },
         {
           "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 19,
+          "normalizedScore": 0.074581675
         },
         {
           "tone": "negativity",
-          "score": 1,
-          "normalizedScore": 0.2
+          "score": 48.21,
+          "normalizedScore": 0.18924119
         },
         {
           "tone": "violence",
@@ -1150,23 +1150,23 @@ var rawData = {
         },
         {
           "tone": "positivity",
-          "score": 3,
-          "normalizedScore": 0.6
+          "score": 124.76001,
+          "normalizedScore": 0.48972687
         },
         {
           "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 3,
+          "normalizedScore": 0.011776053
         },
         {
           "tone": "skepticism",
-          "score": 1,
-          "normalizedScore": 0.2
+          "score": 57.784264,
+          "normalizedScore": 0.22682352
         },
         {
           "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 2,
+          "normalizedScore": 0.007850703
         }
       ]
     },
@@ -1175,43 +1175,43 @@ var rawData = {
       "tonality": [
         {
           "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 1,
+          "normalizedScore": 0.006443235
         },
         {
           "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 11,
+          "normalizedScore": 0.070875585
         },
         {
           "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 30.13,
+          "normalizedScore": 0.19413467
         },
         {
           "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 5,
+          "normalizedScore": 0.032216176
         },
         {
           "tone": "positivity",
-          "score": 1,
-          "normalizedScore": 0.5
+          "score": 68.39,
+          "normalizedScore": 0.44065285
         },
         {
           "tone": "love",
-          "score": 1,
-          "normalizedScore": 0.5
+          "score": 5,
+          "normalizedScore": 0.032216176
         },
         {
           "tone": "skepticism",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 30.681538,
+          "normalizedScore": 0.19768836
         },
         {
           "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 4,
+          "normalizedScore": 0.02577294
         }
       ]
     },
@@ -1220,43 +1220,43 @@ var rawData = {
       "tonality": [
         {
           "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 3,
+          "normalizedScore": 0.021617219
         },
         {
           "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 5,
+          "normalizedScore": 0.036028698
         },
         {
           "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 24.05,
+          "normalizedScore": 0.17329803
         },
         {
           "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 1,
+          "normalizedScore": 0.0072057396
         },
         {
           "tone": "positivity",
-          "score": 2,
-          "normalizedScore": 1
+          "score": 68.94,
+          "normalizedScore": 0.4967637
         },
         {
           "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 7,
+          "normalizedScore": 0.050440177
         },
         {
           "tone": "skepticism",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 28.788258,
+          "normalizedScore": 0.20744069
         },
         {
           "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 1,
+          "normalizedScore": 0.0072057396
         }
       ]
     },
@@ -1265,943 +1265,43 @@ var rawData = {
       "tonality": [
         {
           "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "positivity",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "skepticism",
-          "score": 1,
-          "normalizedScore": 1
-        },
-        {
-          "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
-        }
-      ]
-    },
-    {
-      "id": "133054986743582_813474925368248",
-      "tonality": [
-        {
-          "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "positivity",
           "score": 2,
-          "normalizedScore": 1
-        },
-        {
-          "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "skepticism",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
-        }
-      ]
-    },
-    {
-      "id": "133054986743582_786062331442841",
-      "tonality": [
-        {
-          "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
+          "normalizedScore": 0.0060246126
         },
         {
           "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 10,
+          "normalizedScore": 0.030123062
         },
         {
           "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 52.89,
+          "normalizedScore": 0.15932088
         },
         {
           "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 2,
+          "normalizedScore": 0.0060246126
         },
         {
           "tone": "positivity",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 166.78,
+          "normalizedScore": 0.5023924
         },
         {
           "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 5,
+          "normalizedScore": 0.015061531
         },
         {
           "tone": "skepticism",
-          "score": 0,
-          "normalizedScore": 0
+          "score": 90.30157,
+          "normalizedScore": 0.272016
         },
         {
           "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
-        }
-      ]
-    },
-    {
-      "id": "133054986743582_729934083722333",
-      "tonality": [
-        {
-          "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "positivity",
           "score": 3,
-          "normalizedScore": 0.5
-        },
-        {
-          "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "skepticism",
-          "score": 3,
-          "normalizedScore": 0.5
-        },
-        {
-          "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
-        }
-      ]
-    },
-    {
-      "id": "133054986743582_713418985373843",
-      "tonality": [
-        {
-          "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "positivity",
-          "score": 1,
-          "normalizedScore": 1
-        },
-        {
-          "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "skepticism",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
-        }
-      ]
-    },
-    {
-      "id": "133054986743582_772919762757098",
-      "tonality": [
-        {
-          "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "positivity",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "skepticism",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
-        }
-      ]
-    },
-    {
-      "id": "133054986743582_758108670904874",
-      "tonality": [
-        {
-          "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "positivity",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "skepticism",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
-        }
-      ]
-    },
-    {
-      "id": "133054986743582_720161584699583",
-      "tonality": [
-        {
-          "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "positivity",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "skepticism",
-          "score": 1.222563,
-          "normalizedScore": 1
-        },
-        {
-          "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
-        }
-      ]
-    },
-    {
-      "id": "133054986743582_597653236950419",
-      "tonality": [
-        {
-          "tone": "fear",
-          "score": 1,
-          "normalizedScore": 0.19379845
-        },
-        {
-          "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "negativity",
-          "score": 2,
-          "normalizedScore": 0.3875969
-        },
-        {
-          "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "positivity",
-          "score": 1.16,
-          "normalizedScore": 0.2248062
-        },
-        {
-          "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "skepticism",
-          "score": 1,
-          "normalizedScore": 0.19379845
-        },
-        {
-          "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
-        }
-      ]
-    },
-    {
-      "id": "133054986743582_804738539575220",
-      "tonality": [
-        {
-          "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "negativity",
-          "score": 2,
-          "normalizedScore": 0.32105199
-        },
-        {
-          "tone": "violence",
-          "score": 0.229521,
-          "normalizedScore": 0.036844086
-        },
-        {
-          "tone": "positivity",
-          "score": 2,
-          "normalizedScore": 0.32105199
-        },
-        {
-          "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "skepticism",
-          "score": 2,
-          "normalizedScore": 0.32105199
-        },
-        {
-          "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
-        }
-      ]
-    },
-    {
-      "id": "133054986743582_781157715266636",
-      "tonality": [
-        {
-          "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "negativity",
-          "score": 1,
-          "normalizedScore": 0.31677026
-        },
-        {
-          "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "positivity",
-          "score": 1,
-          "normalizedScore": 0.31677026
-        },
-        {
-          "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "skepticism",
-          "score": 1.156862,
-          "normalizedScore": 0.3664595
-        },
-        {
-          "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
-        }
-      ]
-    },
-    {
-      "id": "133054986743582_807472559301818",
-      "tonality": [
-        {
-          "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "negativity",
-          "score": 1,
-          "normalizedScore": 0.33333334
-        },
-        {
-          "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "positivity",
-          "score": 2,
-          "normalizedScore": 0.6666667
-        },
-        {
-          "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "skepticism",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
-        }
-      ]
-    },
-    {
-      "id": "133054986743582_778791775503230",
-      "tonality": [
-        {
-          "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "negativity",
-          "score": 1.5,
-          "normalizedScore": 0.5597015
-        },
-        {
-          "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "positivity",
-          "score": 0.18,
-          "normalizedScore": 0.06716418
-        },
-        {
-          "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "skepticism",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "hate",
-          "score": 1,
-          "normalizedScore": 0.37313432
-        }
-      ]
-    },
-    {
-      "id": "133054986743582_727309903984751",
-      "tonality": [
-        {
-          "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "negativity",
-          "score": 6,
-          "normalizedScore": 0.8439734
-        },
-        {
-          "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "positivity",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "skepticism",
-          "score": 1.1092285,
-          "normalizedScore": 0.15602656
-        },
-        {
-          "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
-        }
-      ]
-    },
-    {
-      "id": "133054986743582_711270382255370",
-      "tonality": [
-        {
-          "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "positivity",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "skepticism",
-          "score": 1,
-          "normalizedScore": 1
-        },
-        {
-          "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
-        }
-      ]
-    },
-    {
-      "id": "133054986743582_707523922630016",
-      "tonality": [
-        {
-          "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "positivity",
-          "score": 1,
-          "normalizedScore": 1
-        },
-        {
-          "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "skepticism",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
-        }
-      ]
-    },
-    {
-      "id": "133054986743582_903183116397428",
-      "tonality": [
-        {
-          "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "positivity",
-          "score": 2,
-          "normalizedScore": 0.4
-        },
-        {
-          "tone": "love",
-          "score": 1,
-          "normalizedScore": 0.2
-        },
-        {
-          "tone": "skepticism",
-          "score": 2,
-          "normalizedScore": 0.4
-        },
-        {
-          "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
-        }
-      ]
-    },
-    {
-      "id": "133054986743582_766896600026081",
-      "tonality": [
-        {
-          "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "positivity",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "skepticism",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
-        }
-      ]
-    },
-    {
-      "id": "133054986743582_938774666171606",
-      "tonality": [
-        {
-          "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "positivity",
-          "score": 1,
-          "normalizedScore": 1
-        },
-        {
-          "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "skepticism",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
-        }
-      ]
-    },
-    {
-      "id": "133054986743582_744200592295682",
-      "tonality": [
-        {
-          "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "positivity",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "skepticism",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
-        }
-      ]
-    },
-    {
-      "id": "133054986743582_726501397398935",
-      "tonality": [
-        {
-          "tone": "fear",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "desire",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "negativity",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "violence",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "positivity",
-          "score": 1,
-          "normalizedScore": 1
-        },
-        {
-          "tone": "love",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "skepticism",
-          "score": 0,
-          "normalizedScore": 0
-        },
-        {
-          "tone": "hate",
-          "score": 0,
-          "normalizedScore": 0
+          "normalizedScore": 0.009036919
         }
       ]
     }
