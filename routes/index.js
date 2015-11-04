@@ -18,8 +18,6 @@ var pages = [
 /* GET home page. */
 router.get('/', function(req, res, next) {
   Promise.all([
-    queries.members(),
-
     queries.first(1000),
 
     queries.topActive(),
@@ -40,127 +38,70 @@ router.get('/', function(req, res, next) {
     queries.companies(),
     queries.companies(true),
 
-    queries.engagement('posts', 'comment_count', 20),
-    queries.engagement('posts', 'like_count', 20),
-    queries.engagement('posts', 'totalLikes', 20),
-    queries.engagement('comments', 'like_count', 20)
+    queries.engagement('posts', 'comment_count', 10),
+    queries.engagement('posts', 'like_count', 5),
+    queries.engagement('comments', 'like_count', 5)
   ])
   .then(function (results) {
     res.render('index', {
       title: 'Kodapor',
 
-      members: results[0],
+      first: results.shift(),
 
-      first: results[1],
+      activeScore: results.shift(),
+      activePosts: results.shift(),
+      activeComments: results.shift(),
+      activeLikes: results.shift(),
+      activeInactive: results.shift(),
 
-      activeScore: results[2],
-      activePosts: results[3],
-      activeComments: results[4],
-      activeLikes: results[5],
-      activeInactive: results[6],
+      likedNominal: results.shift(),
+      likedPercentActive: results.shift(),
+      likedPercent: results.shift(),
 
-      likedNominal: results[7],
-      likedPercentActive: results[8],
-      likedPercent: results[9],
+      linksPosted: results.shift(),
+      linksPostedDomains: results.shift(),
+      linksLiked: results.shift(),
+      linksLikedDomains: results.shift(),
 
-      linksPosted: results[10],
-      linksPostedDomains: results[11],
-      linksLiked: results[12],
-      linksLikedDomains: results[13],
+      companies: results.shift(),
+      companiesActive: results.shift(),
 
-      companies: results[14],
-      companiesActive: results[15],
-
-      engagementPostsByComments: results[16],
-      engagementPostsByLikes: results[17],
-      engagementPostsByTotalLikes: results[18],
-      engagementCommentsByLikes: results[19],
+      engagementPostsByComments: results.shift(),
+      engagementPostsByLikes: results.shift(),
+      engagementCommentsByLikes: results.shift(),
     });
   })
   .catch(next);
 });
 
 router.get('/memberchart', function(req, res, next) {
-  queries.members()
-    .then(function (members) {
-      res.render('memberchart', {
+  queries.growth('members')
+    .then(function (data) {
+      res.render('chart', {
         title: 'Members',
-        members: members,
-        pages: pages
+        data: data
       });
     })
     .catch(next);  
 });
 
-router.get('/liked', function(req, res, next) {
-  Promise.all([
-      queries.topLiked(),
-      queries.topLiked(true, true),
-      queries.topLiked(true)
-    ])
-    .then(function (values) {
-      res.render('liked', {
-        title: 'Most liked members',
-        likedNominal: values[0],
-        likedActive: values[1],
-        liked: values[2],
-        pages: pages
+router.get('/postchart', function(req, res, next) {
+  queries.growth('posts')
+    .then(function (data) {
+      res.render('chart', {
+        title: 'Posts',
+        data: data
       });
     })
     .catch(next);  
 });
 
-router.get('/links', function(req, res, next) {
-  Promise.all([
-      queries.topLinks(),
-      queries.topLinks(true),
-      queries.topLinks(false, true),
-      queries.topLinks(true, true)
-    ])
-    .then(function (values) {
-      res.render('links', {
-        title: 'Most posted links',
-        links: values[0],
-        domains: values[1],
-        likedLinks: values[2],
-        likedDomains: values[3],
-        pages: pages
-      });
-    })
-    .catch(next);  
-});
-
-router.get('/companies', function(req, res, next) {
-  Promise.all([
-      queries.companies(),
-      queries.companies(true)
-    ])
-    .then(function (values) {
-      res.render('companies', {
-        title: 'Companies',
-        companies: values[0],
-        active: values[1],
-        pages: pages
-      });
-    })
-    .catch(next);  
-});
-
-router.get('/engagement', function(req, res, next) {
-  Promise.all([
-      queries.engagement('posts', 'comment_count', 20),
-      queries.engagement('posts', 'like_count', 20),
-      queries.engagement('posts', 'totalLikes', 20),
-      queries.engagement('comments', 'like_count', 20)
-    ])
-    .then(function (values) {
-      res.render('engagement', {
-        title: 'Most Engaging posts',
-        postsByComments: values[0],
-        postsByLikes: values[1],
-        postsByTotalLikes: values[2],
-        commentsByLikes: values[3],
-        pages: pages
+router.get('/commentchart', function(req, res, next) {
+  queries.growth('comments')
+    .then(function (data) {
+      res.render('chart', {
+        title: 'Comments',
+        data: data
       });
     })
     .catch(next);  

@@ -41,35 +41,37 @@ function connect() {
   return r.connect({db: 'kodapor'});
 }
 
-function members() {
-  return connect()
-    .then(function (conn) {
+function growth(entity) {
+  var query;
+  if(entity === 'members') {
+    query = connect().then(function (conn) {
       return r.table('members')
-        .map(function (m) {
-          return {
-            month: r.expr([m('joined').year().mul(100), m('joined').month()]).sum(),
-            members: 1
-          }
-        })
-        .group('month')
-        .sum('members')
+        .group(r.row('joined').toISO8601().split('-').slice(0, 2))
+        .count()
         .run(conn);
-    })
+    });
+  } else {
+    query = connect().then(function (conn) {
+      return r.table(entity)
+        .group(r.row('created_time').split('-').slice(0, 2))
+        .count()
+        .run(conn);
+    });
+  }
+  
+  return query
     .then(function (cursor) { return cursor.toArray(); })
-    .then(function (members) {
-      var total = members.reduce(function (tot, month) {
+    .then(function (entities) {
+      var total = entities.reduce(function (tot, month) {
         return tot + month.reduction;
       }, 0);
 
-      var maxIncrease = members.reduce(function (max, month) {
+      var maxIncrease = entities.reduce(function (max, month) {
         return Math.max(max, month.reduction);
       }, 0);
 
-      return members.map(function (m, ix, arr) {
-        var ym = m.group.toString();
-
-        m.year = ym.substring(0, 4);
-        m.month = ym.substring(4);
+      return entities.map(function (m, ix, arr) {
+        m.month = m.group.join('-');
         m.increase = m.reduction;
 
         m.total = arr.slice(0, ix+1).reduce(function (tot, month) {
@@ -263,10 +265,17 @@ function topLinks(byDomain, byLikes) {
 function engagement(type, orderBy, limit) {
   return connect()
     .then(function (conn) {
-      return r.table(type)
+      var query = r.table(type)
         .orderBy({index: r.desc(orderBy)})
-        .limit(limit)
-        .run(conn);
+        .limit(limit);
+
+      if(type === 'posts' && orderBy === 'comment_count') {
+        query = query.merge(function (p) {
+          return r.db('kodapor').table('tonality').get(p('id'))
+        });
+      }
+
+      return query.run(conn);
     })
     .then(function (cursor) {
       return cursor.toArray();
@@ -296,7 +305,7 @@ function posts(limit) {
 
 module.exports = {
   first: cache(first, 'first'),
-  members: cache(members, 'members'),
+  growth: cache(growth, 'growth'),
   topActive: cache(topActive, 'topActive'),
   topLiked: cache(topLiked, 'topLiked'),
   inactive: cache(inactive, 'inactive'),
