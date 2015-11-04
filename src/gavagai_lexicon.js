@@ -1,52 +1,52 @@
-var frequency_list = [
+var tags = [
     {
-      "text": "utvecklare",
-      "size": 9,
+      "key": "php",
+      "value": 215,
       "documentFrequency": 0
     },
     {
-      "text": "lottorader",
-      "size": 6,
+      "key": "python",
+      "value": 160,
       "documentFrequency": 0
     },
     {
-      "text": "upplösningar",
-      "size": 5,
+      "key": "programmering",
+      "value": 163,
       "documentFrequency": 0
     },
     {
-      "text": "programmeringsspråk",
-      "size": 4,
+      "key": "programmerare",
+      "value": 137,
       "documentFrequency": 0
     },
     {
-      "text": "8.1",
-      "size": 4,
+      "key": "javascript",
+      "value": 132,
       "documentFrequency": 0
     },
     {
-      "text": "dragningen",
-      "size": 5,
+      "key": "utvecklare",
+      "value": 137,
       "documentFrequency": 0
     },
     {
-      "text": "editor",
-      "size": 4,
+      "key": "kod",
+      "value": 144,
       "documentFrequency": 0
     },
     {
-      "text": "servern",
-      "size": 4,
+      "key": "java",
+      "value": 113,
       "documentFrequency": 0
     },
     {
-      "text": "tpb",
-      "size": 3,
+      "key": "språk",
+      "value": 208,
       "documentFrequency": 0
     },
     {
-      "text": "kodar",
-      "size": 3,
+      "key": "windows",
+      "value": 106,
       "documentFrequency": 0
     }
   ];
