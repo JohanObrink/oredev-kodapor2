@@ -21,11 +21,11 @@ gulp.task('sass', function () {
 gulp.task('concat', function () {
   return gulp.src([
       'bower_components/d3/d3.js',
+      'bower_components/d3-cloud/build/d3.layout.cloud.js',
       'bower_components/progressbar.js/dist/progressbar.js',
       'bower_components/nvd3/build/nv.d3.js',
       'bower_components/reveal.js/js/reveal.js',
       'src/**/*.js',
-      'src/gavagai.js'
     ])
     .pipe(sourcemaps.init())
     .pipe(concat('oredev-kodapor.js'))
