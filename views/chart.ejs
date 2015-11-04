@@ -14,17 +14,17 @@
           bar: true,
           color: '#ccf',
           values: [
-            <%members.forEach(function (member) {%>
-              ['<%=member.year+'-'+member.month%>', <%=member.increase%>],
+            <%data.forEach(function (item) {%>
+              ['<%=item.month%>', <%=item.increase%>],
             <%})%>
           ]
         },
         {
-          key: 'Members',
+          key: '<%=title%>',
           color: '#000',
           values: [
-            <%members.forEach(function (member) {%>
-              ['<%=member.year+'-'+member.month%>', <%=member.total%>],
+            <%data.forEach(function (item) {%>
+              ['<%=item.month%>', <%=item.total%>],
             <%})%>
           ]
         }

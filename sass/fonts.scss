@@ -5,7 +5,7 @@
   font-weight: 300;
   src: local('Roboto Light'), local('Roboto-Light'), url(/fonts/Roboto-Light.ttf) format('ttf');
 }
-/* italic */
+/* thin italic */
 @font-face {
   font-family: 'Roboto';
   font-style: italic;
@@ -18,4 +18,11 @@
   font-style: normal;
   font-weight: 500;
   src: local('Roboto Medium'), local('Roboto-Medium'), url(/fonts/Roboto-Medium.ttf) format('ttf');
+}
+/* medium italic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 500;
+  src: local('Roboto Medium Italic'), local('Roboto-MediumItalic'), url(/fonts/Roboto-MediumItalic.ttf) format('ttf');
 }
