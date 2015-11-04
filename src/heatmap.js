@@ -76,7 +76,7 @@ function drawmap() {
         margin = {
             top: 20,
             right: 25,
-            bottom: 10,
+            bottom: 20,
             left: 100
         },
         width = window.innerWidth - margin.left - margin.right,
@@ -100,7 +100,7 @@ function drawmap() {
 
     var svg = d3.select("#heatmap").append("svg")
         .attr("width", width + margin.left + margin.right)
-        .attr("height", height)
+        .attr("height", height + margin.bottom)
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -210,9 +210,6 @@ function drawmap() {
             d3.selectAll(".rowLabel").classed("text-highlight", false);
             d3.selectAll(".colLabel").classed("text-highlight", false);
             d3.select("#tooltip").classed("hidden", true);
-        })
-        .on("click", function(d, i) {
-            window.open(d.row_name);
         });
 
     // var legend = svg.selectAll(".legend")
